@@ -1,0 +1,46 @@
+{
+    "manifest_version": 2,
+    "name": "TeamPass_Connect",
+    "author": "Jose Ramon Alvarez Gonzalez",
+    "version": "1.0",
+    "description": "Private TeamPass Connect extension.",
+    "icons": {
+        "32": "icons/icon-32.png",
+        "48": "icons/icon-48-light.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": "icons/icon-32.png",
+        "theme_icons": [
+            {
+                "light": "icons/icon-32-light.png",
+                "dark": "icons/icon-32.png",
+                "size": 32
+            }
+        ],
+        "default_title": "TeamPass_Connect",
+        "default_popup": "popup/menu.html"
+    },
+    "web_accessible_resources": [
+        "beasts/frog.jpg",
+        "beasts/turtle.jpg",
+        "beasts/snake.jpg"
+    ],
+    "background": {
+        "scripts": [
+            "lib/jquery-3.6.3.min.js",
+            "params.js",
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["/content_scripts/selector.js"]
+        }
+    ]
+}

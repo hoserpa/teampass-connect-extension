@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link rel="stylesheet" href="menu.css" />
+</head>
+
+<body>
+    <div id="menu-content" class="login">
+        <h2><span class="material-symbols-outlined"> lock </span> TeamPass</h2>
+        <h3>TeamPass connect API</h3>
+
+        <div id="login-content" class="login-form" style="display: none;">
+            <div class="textbox">
+                <input id="loginIp" type="text" placeholder="Server URL"/>
+                <span class="material-symbols-outlined"> dns </span>
+            </div>
+            <div class="textbox">
+                <input id="loginUser" type="text" placeholder="Username" />
+                <span class="material-symbols-outlined"> account_circle </span>
+            </div>
+            <div class="textbox">
+                <input id="loginPass" type="password" placeholder="Password" />
+                <span class="material-symbols-outlined"> lock </span>
+            </div>
+            <div class="textbox">
+                <input id="loginApi" type="text" placeholder="API Key" />
+                <span class="material-symbols-outlined"> api </span>
+            </div>
+            <button id="login">LOGIN</button>
+        </div>
+
+        <div id="session-content" style="display: none;">
+            <p>Server IP: <span id="session-ip">-</span></p>
+            <p>User: <span id="session-user">-</span></p>
+            <button id="copy">
+                <span class="material-symbols-outlined">
+                    password
+                </span>
+                &nbsp;SET
+            </button>
+            <button id="logout">LOGOUT</button>
+        </div>
+    </div>
+    <script src="/lib/jquery-3.6.3.min.js"></script>
+    <script src="../params.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+
+</html>
